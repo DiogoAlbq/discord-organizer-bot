@@ -1,0 +1,81 @@
+discord:
+  guild_id: 123456789012345678
+  token: null
+  intents:
+    - "guilds"
+    - "guild_messages"
+  rate_limit_retries: 5
+  rate_limit_base_delay: 1.0
+  connect_timeout: 30.0
+  request_timeout: 60.0
+
+vault:
+  path: "~/my-vault"
+  ignore_patterns:
+    - "venv"
+    - "__pycache__"
+    - ".git"
+    - "node_modules"
+    - "*.tmp"
+    - "backups"
+    - ".env"
+    - ".venv"
+    - "dist"
+    - "build"
+    - "*.egg-info"
+    - ".pytest_cache"
+    - ".ruff_cache"
+    - ".mypy_cache"
+    - ".coverage"
+    - "htmlcov"
+  follow_symlinks: false
+  include_files: false
+  max_depth: null
+  use_gitignore: true
+
+naming:
+  folder_to_channel: "kebab-case"
+  prefix_categories: "📁 "
+  prefix_channels: "#"
+  strip_prefixes: []
+  custom_replacements: {}
+  max_length: 100
+  allow_unicode: false
+
+sync:
+  conflict_strategy: "manual"
+  delete_orphaned: false
+  update_existing: true
+  create_missing: true
+  move_misplaced: true
+  dry_run: true
+  backup_before_sync: true
+  max_concurrent_ops: 5
+  rate_limit_buffer: 1.5
+
+watch:
+  enabled: false
+  debounce_seconds: 2.0
+  recursive: true
+  ignore_patterns: []
+  auto_sync: false
+  sync_on_startup: true
+
+backup:
+  enabled: true
+  directory: "./backups"
+  max_backups: 10
+  compress: false
+  retention_days: 30
+  incremental: false
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null
+  max_bytes: 10485760
+  backup_count: 5
+  json_format: false
+
+profile: "default"
+profiles: {}
